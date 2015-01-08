@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Advertiser.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Advertiser"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="Green">
+        
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="human">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Background)" Storyboard.TargetName="LayoutRoot">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Green" />
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="zombie">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Background)" Storyboard.TargetName="LayoutRoot">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Red" />
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Viewbox>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Foreground="White" Margin="20,0,20,0" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontFamily="Comic Sans MS">Hi, my name is</TextBlock>
+                <TextBlock Foreground="Wheat" x:Name="ZombieName" Grid.Row="1" VerticalAlignment="Top"
+                           HorizontalAlignment="Center" FontFamily="MV Boli" FontSize="18.667" Visibility="Collapsed">ZOMBIE</TextBlock>
+                <TextBlock Foreground="Wheat" x:Name="HumanName" Grid.Row="1" FontFamily="MV Boli"
+                           VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="18.667">HUMAN</TextBlock>
+            </Grid>
+        </Viewbox>
+        
+        
+    </Grid>
+</Page>
