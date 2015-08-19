@@ -187,4 +187,6 @@ FakesAssemblies/
 # LightSwitch generated files
 GeneratedArtifacts/
 _Pvt_Extensions/
-ModelManifest.xmlproject.lock.json 
+ModelManifest.xml
+
+project.lock.json 
